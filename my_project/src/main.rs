@@ -1,3 +1,8 @@
+mod my_module;
+
+// 使用模块中的函数
+use my_module::utils::greet;
+
 fn main() {
     type_test(1, 2);
     branch_test();
@@ -12,6 +17,14 @@ fn main() {
     println!("coinValue={}", coin_value);
 
     iterator_test();
+
+    greet("world");
+
+    let result = my_module::utils::add(1, 2);
+    println!("result={}", result);
+
+    let result2 = my_module::utils::subtract(1, 2);
+    println!("result2={}", result2);
 }
 
 // 类型
